@@ -1,29 +1,23 @@
 # MakeYourBuger
 
-This template should help get you started developing with Vue 3 in Vite.
+Esse projeto foi desenvolvido com o intuito de por em prática meus conhecimentos sobre vue.js aprendidos seguindo as aula de vue.js do canal hora de codar do Matheus Battisti.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Para inicializar o projeto
 
 ```sh
 npm install
 ```
-
-### Compile and Hot-Reload for Development
+## e depois
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## API - Json server
+
+Foi utilizado o json server para nossa API no backend, é preciso inicia-la para rodar o projeto corretamente.
 
 ```sh
-npm run build
+npm run backend
 ```
+
