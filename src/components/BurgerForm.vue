@@ -71,7 +71,7 @@
     },
     methods:{
       async getIngredientes(){
-        const req = await fetch('http://localhost:3000/ingredientes')
+        const req = await fetch('https://json-server-myb.vercel.app/ingredientes')
         const data = await req.json();
 
         this.paes = data.paes
