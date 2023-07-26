@@ -71,7 +71,7 @@
     },
     methods:{
       async getIngredientes(){
-        const req = await fetch('https://json-server-myb.vercel.app/ingredientes')
+        const req = await fetch('http://localhost:3000/ingredientes')
         const data = await req.json();
 
         this.paes = data.paes
@@ -91,7 +91,7 @@
 
         const dataJson = JSON.stringify(data)
 
-        const req = await fetch("https://json-server-myb.vercel.app/burgers", {
+        const req = await fetch("http://localhost:3000/burgers", {
           method: "POST",
           headers: { "Content-type": "application/json"},
           body: dataJson
