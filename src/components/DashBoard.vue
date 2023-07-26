@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     async getPedidos() {
-      const req = await fetch("http://localhost:3000/burgers");
+      const req = await fetch("https://json-server-myb.vercel.app/burgers");
 
       const data = await req.json();
 
@@ -63,7 +63,7 @@ export default {
       this.getStatus();
     },
     async getStatus(){
-      const req = await fetch("http://localhost:3000/status");
+      const req = await fetch("https://json-server-myb.vercel.app/status");
 
       const data = await req.json();
 
@@ -71,7 +71,7 @@ export default {
     },
     async deleteBurger(id){
 
-      const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+      const req = await fetch(`https://json-server-myb.vercel.app/burgers/${id}`, {
         method: "DELETE"
       });
 
@@ -93,7 +93,7 @@ export default {
 
       const dataJson = JSON.stringify({status: option})
 
-      const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+      const req = await fetch(`https://json-server-myb.vercel.app/burgers/${id}`, {
         method: "PATCH",
         headers:{"content-type":"application/json"},
         body: dataJson
