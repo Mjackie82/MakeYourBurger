@@ -91,7 +91,7 @@
 
         const dataJson = JSON.stringify(data)
 
-        const req = await fetch("http://localhost:3000/burgers", {
+        const req = await fetch("https://json-server-myb.vercel.app/burgers", {
           method: "POST",
           headers: { "Content-type": "application/json"},
           body: dataJson
