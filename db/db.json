@@ -77,32 +77,5 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "nome": "",
-      "carne": "Picanha",
-      "pao": "",
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 10
-    },
-    {
-      "nome": null,
-      "carne": "Alcatra",
-      "pao": null,
-      "opcionais": [
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 11
-    },
-    {
-      "nome": "",
-      "carne": "Alcatra",
-      "pao": "",
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 12
-    }
-  ]
+  "burgers": []
 }

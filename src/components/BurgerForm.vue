@@ -8,13 +8,13 @@
         <!-- Input client name -->
         <div class="input-container">
           <label for="nome">Client Name</label>
-          <input type="text" name="nome" id="nome" v-model="nome" placeholder="Digite seu nome">
+          <input type="text" name="nome" id="nome" v-model="nome" placeholder="Digite seu nome" required>
         </div>
 
         <!-- Input bread -->
         <div class="input-container">
           <label for="pao">Escolha o pão:</label>
-          <select name="pao" id="pao" v-model="pao">
+          <select name="pao" id="pao" v-model="pao" required>
             <option :value="null" disabled hidden>Selecione o seu pão</option>
             <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{ pao.tipo }}</option>
           </select>
@@ -34,8 +34,10 @@
         <div id="opcionais-container" class="input-container">
           <label id="opcionais-title" for="opicionais">Selecione os opcionais:</label>
           <div class="checkbox-container" v-for="opcional in opcionaisData" :key="opcional.id">
-            <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
-            <span>{{ opcional.tipo }}</span>
+            <label>
+              <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
+              <span>{{ opcional.tipo }}</span>
+            </label>
           </div>          
         </div>
 
@@ -112,7 +114,7 @@
         this.nome = '';
         this.pao = '';
         this.carne = '';
-        this.opcionais = '';
+        this.opcionais = [];
       }
     },
     mounted() {
@@ -158,13 +160,23 @@
   .checkbox-container{
     display: flex;
     align-items: flex-start;
-    width: 50%;
-    margin-bottom: 20px;
+    width: 45%;
+    margin: 0 2.5% 20px 2.5%;
+  }
+
+  .checkbox-container label{
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    background-color: #ececec;
+    font-size: 18px;
+    padding: .5em;
   }
 
   .checkbox-container span,
   .checkbox-container input{
-    width: 100%;
+    max-width: 100%;
+    width: auto;
   }
 
   .checkbox-container span{

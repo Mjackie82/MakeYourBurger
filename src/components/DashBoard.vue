@@ -24,7 +24,7 @@
           </div>
           <div>
             <select name="status" class="status" @change="updateBurger($event, burger.id)">
-              <option value="" disabled>Selecione</option>
+              <option value="" disabled selected hidden>Selecione</option>
               <option v-for="stt in status" :key="stt.id" :value="stt.tipo" :selected="burger.status == stt.tipo">{{ stt.tipo }}</option>
             </select>
             <button class="delete-btn" @click="deleteBurger(burger.id)">Cancelar</button>
@@ -114,7 +114,10 @@ export default {
     }
   },
   mounted(){
-    this.getPedidos()
+    setInterval(() => {
+      this.getPedidos()
+    }, 500)
+    
   }
 }
 </script>
@@ -130,6 +133,7 @@ export default {
   .burger-table-row {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
   }
 
   #burger-table-heading {
@@ -157,6 +161,7 @@ export default {
   select {
     padding: 12px 6px;
     margin-right: 12px;
+    width: 40%;
   }
 
   .delete-btn {
@@ -164,11 +169,14 @@ export default {
     color:#fcba03;
     font-weight: bold;
     border: 2px solid #222;
-    padding: 10px;
+    padding: 10px 0;
     font-size: 16px;
     margin: 0 auto;
     cursor: pointer;
     transition: .5s;
+    width: 40%;
+    text-align: center;
+    overflow: hidden;
   }
   
   .delete-btn:hover {
